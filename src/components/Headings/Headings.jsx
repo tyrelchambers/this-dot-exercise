@@ -8,3 +8,10 @@ export const H1 = (props) => {
     </h1>
   );
 };
+export const H2 = (props) => {
+  return (
+    <h2 className={`h2 ${props.className ? props.className : ""}`}>
+      {props.children}
+    </h2>
+  );
+};
