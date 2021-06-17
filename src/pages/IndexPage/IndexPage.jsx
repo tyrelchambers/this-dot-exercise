@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { searchGithub } from "../../api/searchGithub";
 import GithubUser from "../../components/GithubUser/GithubUser";
