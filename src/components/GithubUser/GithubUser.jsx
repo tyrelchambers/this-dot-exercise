@@ -1,25 +1,20 @@
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { getProfileInfo } from "../../api/getProfileInfo";
 
 const GithubUser = ({ user }) => {
   const [info, setInfo] = useState({});
 
   useEffect(() => {
-    getProfileInfo();
-  });
+    const fn = async () => {
+      const userInfo = await getProfileInfo(user);
+      setInfo(userInfo);
+    };
+    fn();
+  }, []);
 
-  const getProfileInfo = async () => {
-    axios
-      .get(user.url, {
-        headers: {
-          Authorization: `token ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`,
-        },
-      })
-      .then((res) => setInfo(res.data));
-  };
   return (
     <div className="flex flex-col overflow-hidden items-center p-4 rounded-md  shadow-md query-result relative bg-white">
       <div className="query-result-bg"></div>

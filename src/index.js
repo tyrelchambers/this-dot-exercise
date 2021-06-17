@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App.jsx";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { INDEX } from "./routes/main.routes";
 import "./assets/main.css";
+import IndexPage from "./pages/IndexPage/IndexPage";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path={INDEX} component={App} />
+        <Route path={INDEX} component={IndexPage} />
       </Switch>
     </Router>
   </React.StrictMode>,
