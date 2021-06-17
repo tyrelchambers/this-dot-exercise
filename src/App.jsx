@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Hero>
-        <H1>GitHub User Search</H1>
+        <H1>GitHub Search</H1>
       </Hero>
 
       <div className="max-w-screen-xl m-auto flex flex-col items-center">
