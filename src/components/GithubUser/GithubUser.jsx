@@ -15,7 +15,7 @@ const GithubUser = ({ user }) => {
     axios
       .get(user.url, {
         headers: {
-          Authorization: "token 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",
+          Authorization: `token ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`,
         },
       })
       .then((res) => setInfo(res.data));
