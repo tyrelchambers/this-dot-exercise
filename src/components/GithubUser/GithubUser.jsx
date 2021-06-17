@@ -9,7 +9,7 @@ const GithubUser = ({ user }) => {
 
   useEffect(() => {
     getProfileInfo();
-  }, []);
+  });
 
   const getProfileInfo = async () => {
     axios

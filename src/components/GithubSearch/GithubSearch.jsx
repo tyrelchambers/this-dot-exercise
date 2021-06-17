@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
 import GithubUser from "../GithubUser/GithubUser";
 import Input from "../Input/Input";
 import InputWrapper from "../InputWrapper/InputWrapper";
@@ -11,7 +10,6 @@ const GithubSearch = () => {
   const [query, setQuery] = useState("");
   const [queryResults, setQueryResults] = useState({});
   const [searching, setSearching] = useState(false);
-  const [page, setPage] = useState(1);
 
   const searchGithub = async (q, page = 1) => {
     return axios
