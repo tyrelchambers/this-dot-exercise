@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import axiosMock from "axios";
 import React from "react";
 import GithubUser from "./GithubUser";
