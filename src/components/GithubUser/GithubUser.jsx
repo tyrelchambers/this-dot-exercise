@@ -33,7 +33,7 @@ const GithubUser = ({ user }) => {
 
         <p className="text-center mt-2 text-gray-500">{info.bio}</p>
 
-        <div className="flex bg-blue-100 mt-4 px-4 py-1 rounded-lg">
+        <div className="flex flex-col items-center bg-blue-100 mt-4 px-4 py-1 rounded-lg md:flex-row">
           <div className="flex mr-4 text-sm">
             <span className="font-bold mr-2">Followers</span>
             {info.followers}
@@ -53,7 +53,7 @@ const GithubUser = ({ user }) => {
               />
               <a
                 href={`https://twitter.com/${info.twitter_username}`}
-                className="text-sm font-bold text-gray-600"
+                className="text-sm font-bold text-gray-600 break-words"
                 title="Twitter Profile"
               >
                 {info.twitter_username}
@@ -80,7 +80,7 @@ const GithubUser = ({ user }) => {
               />
               <a
                 href={`https://${info.blog}`}
-                className="text-sm font-bold text-gray-600"
+                className="text-sm font-bold text-gray-600 break-all"
                 title="Blog"
               >
                 {info.blog}

@@ -30,7 +30,7 @@ function IndexPage() {
     }
   }, [query]);
   return (
-    <div className="w-full">
+    <div className="w-full p-2">
       <Hero>
         <H1>GitHub User Search</H1>
       </Hero>
@@ -61,7 +61,7 @@ function IndexPage() {
               <div className="flex items-center mt-2 mb-2 border-t border-gray-400 py-4">
                 <p className="font-bold">{queryResults.total_count} results</p>
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2 grid-wrapper">
                 {queryResults.items &&
                   queryResults.items.map((user, id) => (
                     <GithubUser user={user} key={user.id} />
@@ -69,8 +69,9 @@ function IndexPage() {
               </div>
               <Pagination
                 pageCount={queryResults.total_count / 30}
-                onPageChange={(i) => {
-                  searchGithub(query, i.selected + 1);
+                onPageChange={async (i) => {
+                  const results = await searchGithub(query, i.selected + 1);
+                  setQueryResults(results);
                 }}
               />
             </div>

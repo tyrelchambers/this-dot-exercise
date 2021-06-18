@@ -1,0 +1,14 @@
+@media screen and (max-width: 503px) {
+  .paginate-btn {
+    width: fit-content;
+    height: 30px;
+    padding: 0 0.5em;
+    margin: 0 0.25em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .paginate-wrapper {
+    flex-wrap: wrap;
+  }
+}
