@@ -63,7 +63,7 @@ function IndexPage() {
               </div>
               <div className="grid grid-cols-3 gap-2 grid-wrapper">
                 {queryResults.items &&
-                  queryResults.items.map((user, id) => (
+                  queryResults.items.map((user) => (
                     <GithubUser user={user} key={user.id} />
                   ))}
               </div>

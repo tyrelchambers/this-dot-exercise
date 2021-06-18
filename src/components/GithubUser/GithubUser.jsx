@@ -34,11 +34,11 @@ const GithubUser = ({ user }) => {
         <p className="text-center mt-2 text-gray-500">{info.bio}</p>
 
         <div className="flex flex-col items-center bg-blue-100 mt-4 px-4 py-1 rounded-lg md:flex-row">
-          <div className="flex mr-4 text-sm">
+          <div className="flex mr-4 text-sm" data-testid="followers">
             <span className="font-bold mr-2">Followers</span>
             {info.followers}
           </div>
-          <div className="flex mr-4 text-sm">
+          <div className="flex mr-4 text-sm" data-testid="following">
             <span className="font-bold mr-2">Following</span>
             {info.following}
           </div>
