@@ -29,6 +29,7 @@ function IndexPage() {
       fn();
     }
   }, [query]);
+
   return (
     <div className="w-full p-2">
       <Hero>
@@ -43,6 +44,7 @@ function IndexPage() {
               onChange={(e) => {
                 setSearching(true);
 
+                // to avoid github rate limiting
                 setTimeout(() => {
                   setQuery(e.target.value);
                 }, 1500);
