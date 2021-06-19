@@ -1,12 +1,6 @@
-import { act, fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import IndexPage from "./IndexPage";
-import axiosMock from "axios";
-import Enzyme from "enzyme";
-import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
-import { shallow } from "enzyme";
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe("<IndexPage/>", () => {
   it("renders", async () => {
