@@ -29,6 +29,7 @@ function IndexPage() {
       fn();
     }
   }, [query]);
+
   return (
     <div className="w-full p-2">
       <Hero>
@@ -43,6 +44,7 @@ function IndexPage() {
               onChange={(e) => {
                 setSearching(true);
 
+                // to avoid github rate limiting
                 setTimeout(() => {
                   setQuery(e.target.value);
                 }, 1500);
@@ -63,7 +65,7 @@ function IndexPage() {
               </div>
               <div className="grid grid-cols-3 gap-2 grid-wrapper">
                 {queryResults.items &&
-                  queryResults.items.map((user, id) => (
+                  queryResults.items.map((user) => (
                     <GithubUser user={user} key={user.id} />
                   ))}
               </div>
