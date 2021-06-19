@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GitHub User Search
 
-## Available Scripts
+This project is a coding exercise for This Dot. It is a simple tool that allows a user to query GitHub's public API to return all users based on a query string.
 
-In the project directory, you can run:
 
-### `yarn start`
+In this exercise I tried to give you a little glimpse of different aspects within my skillset. I'll give a brief explanation of why I did what I did in certain areas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I tried not to over-engineer or go too far outside the scope of the exercise while still giving you a general idea of what I am capable of. I did this by sprinkling in a little bit of everything.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### I Used TailwindCSS & CSS
+I prefer to use a mix of my own custom CSS and TailwindCSS for the sake of speed, simplicity and customizability. I included my own CCS in order to show that I indeed can write my own CSS, but prefer to use TailwindCSS for speed.
 
-### `yarn test`
+I included TailwindCSS moreso to show that I am capable of using such libraries to increase my productivity.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Testing
+I have never tested before, but I wanted to show you, and myself, that I'm capable of it. I am proud of what I achieved in my tests because testing for me has generally been where I've lacked the most in my developer skillset.
 
-### `yarn build`
+I used this exercise to learn how to get started with testing using Jest and React Testing Library which I will now implement in my current, future and past products.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Code I Borrowed & Libraries Used
+For **pagination**, I used React-paginate. I've used this in past projects and it works well-enough so I included it for simplicity and to avoid reinventing a large wheel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The other piece of code I borrowed is the Spinner found in **components/Spinner**. It's a CSS spinner that I used to show a loading state. I included where I found it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The rest of the project is code I wrote aside from Create-React-App boilerplate.
 
-### `yarn eject`
+#### What I'd Improve
+My tests are not complete. I had a hard time testing the <IndexPage/> component because of the debounce methodology I used to avoid GitHub's rate limiting. I couldn't figure out how to properly test that when a user types in the search field, results are displayed eventually.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I'd improve:
+- The design
+- Extend search capabilities to repos, gists, etc.
+- My test coverage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Links
+**Repo**: https://github.com/tyrelchambers/this-dot-exercise
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Site**: https://jolly-goldberg-76884f.netlify.app/
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Search GitHub for users
+- Links to each user
+- Displays handy information of each user
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Client:** React (Create React App), TailwindCSS, FontAwesome
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
